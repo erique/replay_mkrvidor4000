@@ -1,3 +1,19 @@
+/*--------------------------------------------------------------------
+ *                       Replay Firmware
+ *                      www.fpgaarcade.com
+ *                     All rights reserved.
+ *
+ *                     admin@fpgaarcade.com
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ *--------------------------------------------------------------------
+ *
+ * Copyright (c) 2020, The FPGAArcade community (see AUTHORS.txt)
+ *
+ */
+
 #include <Arduino.h>
 #include <stdio.h>
 #include <stdarg.h>
@@ -118,7 +134,7 @@ extern "C" void PrintExceptionInfo(unsigned long* stack)
   }
 }
 
-static char buffer[256];
+static char kprintbuf[256];
 static void kprintstr(const char* str)
 {
   if (!str)
@@ -135,11 +151,11 @@ extern "C" int kprintf(const char * fmt, ...)
 
   va_list args;
   va_start (args, fmt);
-  int n = vsnprintf (buffer, sizeof(buffer)-1, fmt, args);
-  if (0 < n && n < (int)sizeof(buffer))
+  int n = vsnprintf (kprintbuf, sizeof(kprintbuf)-1, fmt, args);
+  if (0 < n && n < (int)sizeof(kprintbuf))
   {
-    buffer[n] = 0;
-    kprintstr(buffer);
+    kprintbuf[n] = 0;
+    kprintstr(kprintbuf);
   }
   va_end (args);
 
