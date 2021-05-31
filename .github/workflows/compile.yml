@@ -21,6 +21,7 @@ jobs:
           path: sketches-reports
   report:
     needs: build
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: Download sketches reports artifact
