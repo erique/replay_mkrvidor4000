@@ -8,16 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        fqbn:
-          - arduino:samd:mkrvidor4000
-
     steps:
       - uses: actions/checkout@v2
+
       - uses: arduino/compile-sketches@v1
         with:
-          fqbn: ${{ matrix.fqbn }}
-          platforms: |
-            - name: "arduino:samd"
-          verbose: true
+          fqbn: 'arduino:samd:mkrvidor4000'
