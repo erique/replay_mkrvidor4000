@@ -2,7 +2,7 @@
 
 ![mkrvidor4000]
 
-With this library you can boot FPGA cores from FPGAArcade Replay framework, on the MKR Vidor 4000.  
+With this library you can boot FPGA cores from [FPGAArcade Replay](https://www.fpgaarcade.com/) framework, on the MKR Vidor 4000.  
 This gives access to 20+ different classic computers, consoles and arcade machines from the 1980s.
 
 ___
