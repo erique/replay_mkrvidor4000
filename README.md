@@ -12,6 +12,7 @@ ___
 * [Arduino MKR Vidor 4000](https://store.arduino.cc/arduino-mkr-vidor-4000)
 * [Arduino MKR SD Proto Shield](https://store.arduino.cc/mkr-sd-proto-shield) or [Arduino MKR MEM Shield](https://store.arduino.cc/arduino-mkr-mem-shield)
 * Micro-USB OTG cable (to connect Keyboard/Mouse)
+* Micro-HDMI to HDMI adapter (to connect a monitor / TV)
 * Some means to power the board when the USB port is in OTG mode:
   * a Micro-USB OTG cable, with separate power lead, or
   * a LiPo battery, connected via the JST connector, or
@@ -37,7 +38,7 @@ If there is no SDCARD, or if it fails to find the .ini file, the firmware will d
 
 ![no_sdcard]
 
-Prepare the SDCARD by FAT32/exFAT formatting it, and copy the contents of the [loader core archive](https://build.fpgaarcade.com/releases/cores/V4/loader/latest) to the root of the SDCARD.
+Prepare the SDCARD by FAT32/exFAT formatting it, and copy the contents of the [loader core archive](https://build.fpgaarcade.com/releases/cores/V4/loader/latest) to the root of the SDCARD.  
 Typically these files would need to be copied over:
 ```
 Archive:  loader_V4_20210531_2203_3676175.zip
